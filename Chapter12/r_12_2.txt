@@ -1,0 +1,7 @@
+connect target /
+startup mount;
+restore database until time
+  "to_date('05-oct-2006 14:00:00', 'dd-mon-rrrr hh24:mi:ss')";
+recover database until time
+  "to_date('05-oct-2006 14:00:00', 'dd-mon-rrrr hh24:mi:ss')";
+alter database open resetlogs;

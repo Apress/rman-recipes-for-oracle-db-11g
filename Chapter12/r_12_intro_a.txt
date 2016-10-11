@@ -1,0 +1,3 @@
+select file#, status, checkpoint_change#,
+to_char(checkpoint_time,'dd-mon-rrrr hh24:mi:ss')
+from v$datafile_header;

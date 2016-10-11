@@ -1,0 +1,9 @@
+create script full_disk_db
+{
+allocate channel c1 type disk
+format 'c:\oracle\flash\loc1\rman_%U.rman';
+backup
+database
+include current controlfile;
+release channel c1;
+}

@@ -1,0 +1,8 @@
+run{
+set newname for datafile 4 to '/ora01/BRDSTN/data_ts01.dbf';
+set newname for datafile 5 to '/ora01/BRDSTN/data_ts02.dbf';
+restore tablespace data_ts;
+switch datafile all; # Updates repository with new datafile location.
+recover tablespace data_ts;
+alter database open;
+}

@@ -1,0 +1,7 @@
+select sequence#, first_change#, first_time
+from v$log_history
+order by first_time;
+
+select sequence#, first_change#, first_time
+from v$archived_log
+order by first_time;

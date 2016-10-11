@@ -1,0 +1,4 @@
+connect target /
+startup mount;
+restore database;
+recover database test;
